@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+  
+        body {
+            margin: 0;
+            background-image: url('sample/image/하늘.PNG');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-y: auto; /* 스크롤 가능하게 설정 */
+            scroll-behavior: smooth; /* 부드러운 스크롤 */
+        }
+
+        /* Scroll Snap */
+        #container {
+            width: 100%;
+            height: 100vh;
+            scroll-snap-type: y mandatory;
+            overflow-y: auto; /* 세로 스크롤 허용 */
+        }
+
+        .list {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .first_line {
+            position: relative;
+            animation: move-text 2s ease-out forwards;
+            font-family: 'SDMiSaeng', sans-serif;
+            color: rgb(0, 151, 211);
+            font-size: 60px;
+        }
+
+        .map-container {
+            position: relative;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .overlay-image {
+            position: absolute;
+            width: 50px;
+            cursor: pointer;
+        }
+
+        .overlay-image-1 {
+            top: 700px;
+            left: 1310px;
+        }
+
+        .overlay-image-2 {
+            top: 315px;
+            left: 850px;
+        }
+
+        .overlay-image-3 {
+            top: 640px;
+            left: 700px;
+        }
+
+        @keyframes move-text {
+            from {
+                left: -1000px;
+                opacity: 0;
+            }
+            to {
+                left: 0px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="list">
+            <a href="#">
+                <img src="sample/image/Frame.PNG" width="1680" alt="메인페이지">
+            </a>
+        </div>
+        <div class="map-container list">
+            <img src="sample/image/망원동.png" width="1100" alt="망원동지도" class="image-animation">
+            
+            <!-- 첫 번째 이미지 클릭 시 Section 2로 이동 -->
+            <a href="00_서울성산초등학교.html">
+                <img src="https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png" 
+                    class="overlay-image overlay-image-1">
+            </a>
+            
+            <!-- 두 번째 이미지 클릭 시 Section 3로 이동 -->
+            <a href="#section3">
+                <img src="https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png" 
+                    class="overlay-image overlay-image-2">
+            </a>
+            
+            <!-- 세 번째 이미지 클릭 시 Section 4로 이동 -->
+            <a href="#section4">
+                <img src="https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png" 
+                    class="overlay-image overlay-image-3">
+            </a>
+        </div>
+
+        <div class="list" id="section2">
+            <h2>읽어주셔서 감사합니다!!</h2>
+            <p></p>
+        </div>
+</body>
+</html>
+
+
+    
+
+</body>
+</html>

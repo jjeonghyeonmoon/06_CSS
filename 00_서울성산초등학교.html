@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #container {
+            width: 100%;
+            height: 100vh; 
+            overflow: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+
+        .list {
+            width: 100%; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: center;
+        }
+
+        .list:nth-child(2) {
+            background-color: #4e5a56;
+        }
+
+        .list:nth-child(3) {
+            background-color: #9d949e;
+        }
+
+        .list:nth-child(4) {
+            background-color: #e0d8cc;
+        }
+
+        .list:nth-child(5) {
+            background-color: #8a6e8a;
+        }
+
+        h3 {
+            font-family: 'Pretendard-Thin';
+            color: #ffffff;
+            text-align: center;
+            font-style: italic;
+            font-weight: lighter;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        .menu * {
+            display: inline;
+        }
+
+        .menu li {
+            margin: 35px;
+        }
+
+        .menu li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .menu ul {
+            padding-left: 0px;
+        }
+
+        .menu {
+            font-size: 20px;
+            font-style: italic;
+            text-align: center;
+            padding-top: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+        } 
+
+        .one, .two, .three, .four, .five {
+            text-align: center;
+            align-items: center;
+        }
+
+        .profile img {
+            border-radius: 30%;
+            border: 1px solid rgb(255, 255, 255, 0.5);
+        }
+
+        .me {
+            width: 450px;
+            height: 500px;
+        }
+
+        .contact_img {
+            width: 100%;
+            height: 500px;
+            padding-bottom: 60px;
+        }
+
+        .ct {
+            margin-top: 80px;
+            text-decoration: none;
+            color: white;
+            font-size: 50px;
+            font-style: italic;
+            margin: 35px;
+        }
+
+        /* 추가한 이미지가 수평으로 나열되도록 하는 스타일 */
+        .multiple-images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="header"> 
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html"><b>Home</b></a></li>
+                    <li><a href="about.html"><b>학교소개</b></a></li>
+                    <li><a href="favorites.html"><b>분식집</b></a></li>
+                    <li><a href="contact.html"><b>문방구</b></a></li>
+                </ul>
+            </nav>
+        </header> 
+
+        <!-- Page 1 -->
+        <div class="list">
+            <div class="one">
+                <span class="profile"><img src="sample/image/학교.PNG" width="550px" height="550px" alt=""/></span> 
+                <h3><strong>서울성산초등학교</strong><br>
+                    1969년 03월 01일 설립한 50년 역사를 자랑하는 저의 초등학교입니다.</h3><br>
+                    충격! 요즘은 학급 평균 학생수가 19명..!!
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="list">
+            <div class="two" style="display: flex; flex-direction: column; align-items: center;">
+                <img class="me" src="sample/image/문방구.png" alt="" 
+                     style="width: auto; height: auto; max-width: 60%; max-height: 110vh; object-fit: contain; margin-bottom: 20px;">
+                <h3 class="intext"><strong>바이타임</strong><br><br>
+                    굉장히 오래된 어느 초등학교 앞이나 있던 추억의 분식집</h3>
+            </div>
+        </div>
+
+    
+        <!-- Page 2 복제 1 (Page 3) -->
+<div class="list">
+    <div class="two multiple-images">
+        <!-- 첫 번째 이미지 -->
+        <img class="me" src="sample/image/메뉴판1.png" 
+             alt="" 
+             style="width: 950px; height: 900px; max-width: 90%; max-height: 70%; object-fit: contain;">
+    </div>
+    <h3 class="intext" style="color: rgb(0, 0, 0);"><strong>추억의 음식과 여전히 저렴했던 가격</strong><br><br>
+        또 다른 추억의 분식집 이야기</h3>
+</div>
+
+
+        <!-- Page 2 복제 2 (Page 4) -->
+        <div class="list">
+            <div class="two">
+                <img class="me" src="sample/image/피카츄.png" alt="" width="650px" height="900px">
+                <h3 class="intext"><strong>라떼는 500원^</strong><br><br>
+                    </h3>
+            </div>
+        </div>
+
+        
