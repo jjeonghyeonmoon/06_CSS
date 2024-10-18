@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>망원시장 맛집 소개</title>
+    <style>
+        :root {
+            --background-color: #f8ecd5; /* 부드러운 살구색 배경 */
+            --text-color: #333;
+            --card-background: #fff;
+            --primary-color: #e76f51; /* 따뜻한 오렌지 톤 */
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #1e1e1e;
+                --text-color: #f0f0f0;
+                --card-background: #333;
+                --primary-color: #ff6347;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        #container {
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .list {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        .intro {
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro img {
+            width: 100%;
+            max-width: 600px;
+            height: 700px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 이미지에 그림자 추가 */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            margin: 10px 0;
+            color: var(--text-color);
+        }
+
+        .card-address {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .rating {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #ffb400;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Page 1 - 망원시장 소개 -->
+        <div class="list">
+            <div class="intro">
+                <h1>📍 망원시장 소개</h1>
+                <p>서울의 대표적인 전통시장, 망원시장! <br>다양한 먹거리와 소소한 상점들이 모여있는 이곳에서 꼭 방문해야 할 맛집들을 소개합니다.</p>
+                <img src="sample/image/망원시장.PNG" alt="망원시장">
+            </div>
+        </div>
+
+        <!-- Page 2 - 맛집 소개 카드 목록 -->
+        <div class="list">
+            <div class="container">
+                <!-- 맛집 카드 1 -->
+                <a href="00_맛집1.html" class="card">
+                    <img src="sample/image/송이네.PNG.jpg" alt="맛집1">
+                    <div class="card-content">
+                        <h2 class="card-title">연매출 10억 떡볶이집 송이네</h2>
+                        <p class="card-description">매콤하고 달콤한 떡볶이와 대파된장김밥을 맛볼 수 있는 명소.</p>
+                        <p class="card-address">서울시 마포구 망원동 123-45</p>
+                        <p class="rating">⭐️ 3.0</p>
+                    </div>
+                </a>
+                
+                <!-- 맛집 카드 2 -->
+                <a href="00_맛집2.html" class="card">
+                    <img src="sample/image/마쉬멜로우 최종.jpg" alt="맛집2">
+                    <div class="card-content">
+                        <h2 class="card-title">마쉬멜로우 아이스크림과 돈까스맛집!!</h2>
+                        <p class="card-description">겉은 바삭, 속은 촉촉한 치킨을 자랑하는 인기 가게.</p>
+                        <p class="card-address">서울시 마포구 망원동 678-90</p>
+                        <p class="rating">⭐️ 3.5</p>
+                    </div>
+                </a>
+                
+                <!-- 맛집 카드 3 -->
+                <a href="00_맛집3.html" class="card">
+                    <img src="sample/image/맛양값.jpg" alt="맛집3">
+                    <div class="card-content">
+                        <h2 class="card-title">맛양값</h2>
+                        <p class="card-description">냉면을 시키면 스테이크가 서비스@!!!!!</p>
+                        <p class="card-address">서울시 마포구 망원동 789-12</p>
+                        <p class="rating">⭐️ 4.5</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

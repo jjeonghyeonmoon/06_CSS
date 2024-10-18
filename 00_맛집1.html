@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>송이네 - 망원시장</title>
+    <!-- Google Fonts 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #f8ecd5;
+            --text-color: #333;
+            --card-background: #fff;
+            --primary-color: #e76f51;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* 폰트 적용 */
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 1000px;
+            height: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 600; /* 제목의 글씨를 더 굵게 */
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2rem; /* 글씨 크기 증가 */
+            font-weight: 400; /* 설명 글씨 굵기 */
+            color: var(--text-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-card {
+            background: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-align: center;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-card-content {
+            padding: 15px;
+        }
+
+        .menu-card-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .menu-card-description {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .menu-card-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .back-link:hover {
+            background-color: #d54b33;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Header with restaurant info and image -->
+        <div class="header">
+            <h1>송이네</h1>
+            
+            <p class="description">매콤하고 달콤한 떡볶이와 대파된장김밥을 자랑하는 연매출 10억!!!의 망원시장의 인기 맛집입니다.</p>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu-container">
+            <!-- Menu Card 1 -->
+            <div class="menu-card">
+                <img src="sample/image/떡복이2.jpg" alt="떡볶이">
+                <div class="menu-card-content">
+                    <h2 class="menu-card-title">떡볶이</h2>
+                    <p class="menu-card-description">매콤하고 달달한 전통 떡볶이.</p>
+                    <p class="menu-card-price">₩5,000</p>
+                </div>
+            </div>
+
+            <!-- Menu Card 2 -->
+            <div class="menu-card">
+                <img src="sample/image/대파된장김밥.jpg" alt="대파된장김밥">
+                <div class="menu-card-content">
+                    <h2 class="menu-card-title">대파된장김밥</h2>
+                    <p class="menu-card-description">된장과 대파의 고소함이 어우러진 이색 김밥.</p>
+                    <p class="menu-card-price">₩3,500</p>
+                </div>
+            </div>
+
+            <!-- Menu Card 3 -->
+            <div class="menu-card">
+                <img src="sample/image/슬러쉬 맥주.jpg" alt="슬러쉬맥주">
+                <div class="menu-card-content">
+                    <h2 class="menu-card-title">생맥주슬러쉬</h2>
+                    <p class="menu-card-description">생맥주위에 생맥주슬러쉬를 올려주는 인기메뉴!!.</p>
+                    <p class="menu-card-price">₩4,000</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="00_망원시장.html" class="back-link">← 돌아가기</a>
+    </div>
+</body>
+</html>
